@@ -1,0 +1,40 @@
+@page
+@using Sky.SelfServe.Models
+@model PartnerView
+@{
+    //ViewData["Title"] = "Error";
+    var partnerView = Html.ViewData.Model;
+}
+
+<div class="container section-component pure-content">
+    <h1><img src="//resource.cdn.azure.cn/marketing-resource/media/images/partner/parter-icon_gold.png" class="h1-icon hidden-xs hidden-sm"/>金牌合作伙伴</h1>
+    <ul class="partner-case">
+        @foreach (var partner in partnerView.PartnerList)
+        {
+            <li>
+                <a href="@partner.TileLink" id="partner_cloudwill" target="_blank" rel="nofollow"></a>
+                <div class="logo-mobile"><img src="@partner.TileImageUrl" data-rjs="2"/></div>
+                <a href="@partner.TileLink" id="partner_cloudwill-title" rel="nofollow" target="_blank">@partner.TileName</a>
+                <p class="hidden-xs hidden-sm">@partner.TileDescription</p>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="container section-component pure-content">
+    <h1><img src="//resource.cdn.azure.cn/marketing-resource/media/images/partner/parter-icon_silver.png" class="h1-icon hidden-xs hidden-sm"/>银牌合作伙伴</h1>
+    <ul class="partner-case">
+        <li>
+            <a href="http://www.yiruixinxi.com/" id="partner_csyirui" target="_blank" rel="nofollow"></a>
+            <div class="logo-mobile"><img src="//resource.cdn.azure.cn/marketing-resource/media/images/partner/videa@2x.png" data-rjs="2"/></div>
+            <a href="http://www.yiruixinxi.com/" id="partner_csyirui-title" rel="nofollow" target="_blank">长沙艺瑞信息</a>
+            <p class="hidden-xs hidden-sm">解决方案：服务端虚拟化服务监控与管理</p>
+        </li>
+        <li>
+            <a href="http://www.jbinfo.cn/" id="partner_jbinfo" target="_blank" rel="nofollow"></a>
+            <div class="logo-mobile"><img src="//resource.cdn.azure.cn/marketing-resource/media/images/partner/jbinfo@2x.png" data-rjs="2"/></div>
+            <a href="http://www.jbinfo.cn/" id="partner_jbinfo-title" rel="nofollow" target="_blank">山东青鸟软通</a>
+            <p class="hidden-xs hidden-sm">智能制造云平台、智慧养老、云平台迁移/运维、混合云</p>
+        </li>
+    </ul>
+</div>
